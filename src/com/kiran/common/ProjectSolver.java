@@ -1,9 +1,12 @@
 package com.kiran.common;
 
+import com.kiran.project.euler.problems.Problem1;
+
 public class ProjectSolver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		new Problem1().solve();
 
 	}
 

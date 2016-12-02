@@ -88,4 +88,20 @@ public class CommonHelper {
 		 }   
 		 return list;
 	}
+	
+	public List<Integer> getSquaredList(List<Integer> list){
+		List<Integer> squaredList = new ArrayList<Integer>();
+		for(Integer num : list){
+			squaredList.add(new Integer(num*num));
+		}
+		return squaredList;
+	}
+	
+	public Integer getSumof(List<Integer> list){
+		int sum = 0;
+		for(Integer num : list){
+			sum+=num;
+		}
+		return sum;
+	}
 }

@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.*;
 
 public class CommonHelperTest {
+	
 	CommonHelper commonHelper;
 	
 	@Before
@@ -58,4 +59,10 @@ public class CommonHelperTest {
 		assertEquals("Not as expected", list, commonHelper.getFibiNocciNumbersBelow(5));
 	}
 
+	@Test
+	public void squaredTest(){
+		List<Integer> list = Arrays.asList(1,2,3,4,5);
+		List<Integer> squaredList = Arrays.asList(1,4,9,16,25);
+		assertEquals("Not as expected", squaredList, commonHelper.getSquaredList(list));
+	}
 }
