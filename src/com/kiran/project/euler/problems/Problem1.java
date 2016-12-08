@@ -2,21 +2,21 @@ package com.kiran.project.euler.problems;
 
 import java.util.*;
 
+import com.kiran.common.NoSolutionException;
 import com.kiran.project.euler.CommonHelper;
+import com.kiran.project.euler.Problem;
 
-public class Problem1 {
-
+public class Problem1 extends Problem{
 	
 	
-	CommonHelper commonHelper = new CommonHelper();
-	public Integer solve(){
-		List<Integer> list = commonHelper.getNaturalNumbers(999);
+	public  long solve() throws NoSolutionException{
+		List<Integer> list = CommonHelper.getNaturalNumbers(999);
 		List<Integer> divisible = new ArrayList<Integer>();
 		for(Integer num : list){
 			if(num % 5 ==0 || num % 3 ==0){
 				divisible.add(new Integer(num));
 			}
 		}
-		return commonHelper.getSumof(divisible);
+		return CommonHelper.getSumof(divisible);
 	}
 }
