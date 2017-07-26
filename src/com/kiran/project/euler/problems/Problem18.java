@@ -1,8 +1,6 @@
 package com.kiran.project.euler.problems;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import com.kiran.project.euler.CommonHelper;
 import com.kiran.project.euler.Problem;
@@ -47,24 +45,24 @@ public class Problem18 extends Problem {
 		if(row == 14){
 			long sum = CommonHelper.getSumof(Arrays.asList(stack) );
 			if(sum > result){
-				System.out.println("\n\n\nSUM ::"+sum+"\n\n\n");
+//				System.out.println("\n\n\nSUM ::"+sum+"\n\n\n");
 				result = sum;
 			}
 			
 			return;
 		}
-		System.out.println("GOT::"+arr[row+1][index]);
+//		System.out.println("GOT::"+arr[row+1][index]);
 		push(arr[row+1][index]);
 		
 		findSum(row+1, index);
 		
-		System.out.println("removed::"+pop());
+//		System.out.println("removed::"+pop());
 
-		System.out.println("GOT::"+arr[row+1][index+1]);
+//		System.out.println("GOT::"+arr[row+1][index+1]);
 		push(arr[row+1][index+1]);
 		
 		findSum(row+1, index+1);
-		System.out.println("removed::"+pop());
+//		System.out.println("removed::"+pop());
 		//return result;
 		
 	}

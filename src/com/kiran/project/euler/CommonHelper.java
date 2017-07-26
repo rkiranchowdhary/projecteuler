@@ -1,5 +1,6 @@
 package com.kiran.project.euler;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,6 +90,30 @@ public class CommonHelper {
 		 return list;
 	}
 	
+	public static BigDecimal getNthFibiNocciNumbers(int number){
+		//List<Integer> list = new ArrayList<Integer>();
+		
+		if(number == 1){
+			return BigDecimal.ZERO;
+		}
+		if(number == 2){
+			return BigDecimal.ONE;
+		}
+		
+		
+		
+		BigDecimal  n1= BigDecimal.ZERO,n2= BigDecimal.ONE,n3 = null; 
+		int count = 2;
+		while(count < number)   
+		 {    
+		  n3=n1.add(n2);    
+		 // list.add(new Integer(n3));   
+		  n1=n2;    
+		  n2=n3;    
+		 }   
+		 return n3;
+	}
+	
 	public static List<Integer> getSquaredList(List<Integer> list){
 		List<Integer> squaredList = new ArrayList<Integer>();
 		for(Integer num : list){
@@ -171,6 +196,11 @@ public class CommonHelper {
 		List<Long> list = getFactors(num);
 		list.add(new Long(1));
 		return list;
+	}
+	
+	public static long factorial(int num){
+		if(num == 1) return 1;
+		return num*factorial(num-1);
 	}
 	
 }

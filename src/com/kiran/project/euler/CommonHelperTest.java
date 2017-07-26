@@ -10,7 +10,7 @@ public class CommonHelperTest {
 	@Test
 	public void evenTest() {
 		assertTrue(CommonHelper.isEven(2));	
-	}
+	} 
 	
 	@Test
 	public void oddTest(){

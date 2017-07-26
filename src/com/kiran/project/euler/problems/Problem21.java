@@ -1,11 +1,12 @@
 package com.kiran.project.euler.problems;
 
-import java.util.ArrayList;
 import java.util.*;
 
+import com.kiran.common.Solvable;
 import com.kiran.project.euler.CommonHelper;
 import com.kiran.project.euler.Problem;
 
+@Solvable
 public class Problem21 extends Problem {
 
 	public long solve(){
@@ -21,7 +22,7 @@ public class Problem21 extends Problem {
 					list.add(temp);
 			}
 		}
-		List set = new ArrayList(list);
+		List<Long> set = new ArrayList<Long>(list);
 		return CommonHelper.getSumof(set);
 	}
 }

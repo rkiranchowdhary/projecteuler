@@ -1,7 +1,7 @@
 package com.kiran.common;
 
 public class NoSolutionException extends RuntimeException {
-
+ 
 	/**
 	 * 
 	 */

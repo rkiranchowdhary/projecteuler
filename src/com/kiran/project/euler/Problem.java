@@ -4,6 +4,7 @@ import com.kiran.common.NotImplementedException;
 
 public class Problem extends Thread{
 
+	protected CommonHelper helper;
 	public void run(){
 		try {
 			System.out.println("solution to "+this.getClass().getName()+" is :"+this.solve());
